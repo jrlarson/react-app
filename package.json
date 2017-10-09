@@ -2,13 +2,16 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "react-scripts": "1.0.14",
+    "react-table": "^6.6.0",
     "redux": "^3.5.2",
-    "redux-saga": "^0.15.3"
+    "redux-saga": "^0.15.3",
+    "superagent": "^3.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,6 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "eslint": "^4.8.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",

@@ -1,0 +1,1 @@
+export const searchParam = (state) => state.searchParam;

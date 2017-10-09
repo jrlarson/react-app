@@ -4,8 +4,8 @@ import Button from '../components/Button'
 
 const Input = () =>
   <div>
-    <TextField fieldName="searchInput" searchInputEnabled="true"/>
-    <Button btnName="searchButton" btnEnabled="true" />
+    <TextField fieldName="searchInput" searchInputDisabled="true"/>
+    <Button btnName="searchButton" btnDisabled="false" />
   </div>
 
 export default Input
