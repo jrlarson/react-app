@@ -8,6 +8,9 @@ import App from './App';
 import search  from './reducers/Reducer';
 import rootSaga from './sagas/Saga';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   search,
