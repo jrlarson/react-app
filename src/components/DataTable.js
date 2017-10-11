@@ -11,11 +11,24 @@ const init_columns = [{
   Header: 'Genre',
   accessor: 'primaryGenreName'
 }, {
-  Header: 'iTunes URL',
-  accessor: 'artistLinkUrl' 
+  Header: 'iTunes Link',
+  accessor: 'artistLinkUrl',
+  Cell: row => (
+    <div>
+      <a href={row.value} target='_blank'>Go</a>
+    </div>
+  )
 }];
 
-const DataTable = ({data, columns = init_columns}) => <ReactTable data={data} columns={columns} />
+const DataTable = ({data, columns = init_columns}) => 
+  <ReactTable data={data} columns={columns} defaultPageSize='10'
+    className='-striped -highlight' defaultSorted={[
+      {
+        id: 'artistName',
+        desc: false
+      }
+    ]}
+  />
 
 function mapStateToProps(state) {
   return {

@@ -1,16 +1,13 @@
-const initialState = {
-  searchParam: 'empty',
-  list: 'empty'
-}
-
-export default function search(state = initialState, action) {
+export const  search = (state = {}, action) => {
   switch (action.type) {
   case 'REQUEST_DATA':
+  // This is one way to provide a new state object with manipulated values.
     return Object.assign({}, state, {
       searchInputDisabled: true,
       btnDisabled: true
     });
   case 'CHANGE_TEXT':
+  // Another way to provide a new state object with manipulated values (Object Spread operator).
     return { ...state, searchParam: action.value, fieldName: action.fieldName };
   case 'RECEIVE_DATA':
     return { ...state, data: action.data.body.results, searchInputDisabled: false, btnDisabled: false};

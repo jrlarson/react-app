@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 const TextField = ({onTextChange, fieldName = '', searchInputDisabled = false}) => 
   <input type="text" onChange={onTextChange} name={fieldName} disabled={searchInputDisabled} />;
  
-  
 const changeTextAction = (textValue, name) => {
   return {
     type: 'CHANGE_TEXT',

@@ -5,7 +5,7 @@ var data_err = {
   err_msg: 'GET request failed!'
 }
   
-export function fetchData(searchParam) {
+export const fetchData = (searchParam) => {
     
   const req = request.get('/data')
     .query({search: searchParam})

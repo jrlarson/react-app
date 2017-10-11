@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-const Button = ({ onButtonClick, btnName, btnDisabled }) => <button onClick={onButtonClick} disabled={btnDisabled} name={btnName} >GO</button>;
+const Button = ({ onButtonClick, btnName = '', btnDisabled = false }) => <button onClick={onButtonClick} disabled={btnDisabled} name={btnName} >GO</button>;
 
 const clickButtonAction = () => {
   return {

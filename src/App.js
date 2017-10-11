@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Input from './containers/Input';
 import DataTable from './components/DataTable'
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Grid, Navbar, Jumbotron } from 'react-bootstrap';
 
 const App = () =>
   <div>
@@ -20,7 +19,6 @@ const App = () =>
       <Grid>
         <h1>iTunes Artist Search</h1>
         <p>
-
           <div>
             <Input />
           </div>

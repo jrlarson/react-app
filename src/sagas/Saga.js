@@ -1,13 +1,13 @@
 import { put, call, takeLatest, select } from 'redux-saga/effects'
-import {requestData, receiveData} from '../actions/index';
+import {requestDataAction, receiveDataAction} from '../actions/index';
 import * as selectors from '../selectors/selectors';
 import {fetchData} from '../api/api';
 
 export function* onSearch() {
-  yield put(requestData());
+  yield put(requestDataAction());
   const searchTerm = yield select(selectors.searchParam);
   const result = yield call(fetchData, searchTerm);
-  yield put(receiveData(result));
+  yield put(receiveDataAction(result));
 }
 
 // single entry point to start all Sagas at once

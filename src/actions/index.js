@@ -1,12 +1,12 @@
-export function requestData() {
-  return { type: 'REQUEST_DATA' }
+export const requestDataAction = () => {
+  return { type: 'REQUEST_DATA' };
 }
    
-export function receiveData(data) {
+export const receiveDataAction = (data) => {
   return { type: 'RECEIVE_DATA', data };
 }
 
-export function receiveDataError(data_err) {
+export const receiveDataErrorAction = (data_err) => {
   return { type: 'RECEIVE_DATA_ERROR', data_err };
 }
  
