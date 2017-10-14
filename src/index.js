@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import App from './App';
 
-import search  from './reducers/Reducer';
+import search  from './reducers/Search';
 import rootSaga from './sagas/Saga';
 
 import 'bootstrap/dist/css/bootstrap.css';

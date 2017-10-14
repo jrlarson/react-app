@@ -1,7 +1,9 @@
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-const Button = ({ onButtonClick, btnName = '', btnDisabled = false }) => <button onClick={onButtonClick} disabled={btnDisabled} name={btnName} >GO</button>;
+export const Button = ({ onButtonClick, btnName = '', btnDisabled = false }) => 
+  <button onClick={onButtonClick} disabled={btnDisabled} name={btnName} id={btnName} className='button'>GO</button>;
 
 const clickButtonAction = () => {
   return {
@@ -9,13 +11,13 @@ const clickButtonAction = () => {
   };
 }
 
-function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
   return {
-    btnDisabled: state.btnDisabled
+    btnDisabled: _.get(state.btnDisabled, 'btnDisabled', false)
   };
 }
 
-function mapDispatchToProps(dispatch) {
+export const mapDispatchToProps = (dispatch) => {
   return {
     onButtonClick: () => dispatch(clickButtonAction())
   };

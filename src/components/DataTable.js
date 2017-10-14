@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
@@ -15,12 +16,25 @@ const init_columns = [{
   accessor: 'artistLinkUrl',
   Cell: row => (
     <div>
-      <a href={row.value} target='_blank'>Go</a>
+      <a href={row.value} target='_blank' >Go</a>
     </div>
   )
 }];
 
-const DataTable = ({data, columns = init_columns}) => 
+const initial_data = [
+  {
+    wrapperType: 'artist',
+    artistType: 'Artist',
+    artistName: '__',
+    artistLinkUrl: '#',
+    artistId: 0,
+    amgArtistId: 0,
+    primaryGenreName: '__',
+    primaryGenreId: 0
+  }
+];
+
+export const DataTable = ({data, columns = init_columns}) => 
   <ReactTable data={data} columns={columns} defaultPageSize='10'
     className='-striped -highlight' defaultSorted={[
       {
@@ -30,9 +44,9 @@ const DataTable = ({data, columns = init_columns}) =>
     ]}
   />
 
-function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
   return {
-    data: state.data
+    data: _.get(state, 'data', initial_data)
   };
 }
   
