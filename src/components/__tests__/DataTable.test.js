@@ -6,20 +6,25 @@ import { mapStateToProps } from '../DataTable';
 const initialize_columns = [{
   Header: 'Artist Name',
   accessor: 'artistName', // String-based value accessors!
+  /* eslint-disable react/display-name */
   Cell: row => (
     <div data={row.value}>{row.value}</div>
   )
+  /* eslint-enable */
+
 }, {
   Header: 'Genre',
   accessor: 'primaryGenreName'
 }, {
   Header: 'iTunes Link',
   accessor: 'artistLinkUrl',
+  /* eslint-disable react/display-name */
   Cell: row => (
     <div>
       <a href={row.value} target='_blank' className='item-link'>Go</a>
     </div>
   )
+  /* eslint-enable */
 }];
 
 const initial_data = [
@@ -51,7 +56,7 @@ test('DataTable component renders a Table ', () => {
   const tableProps = {
     data: initial_data,
     columns: initialize_columns,
-  }
+  };
 
   const table = render( <DataTable {...tableProps} />);
   expect(table.find('.item-link').length).toEqual(2);

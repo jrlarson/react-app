@@ -1,4 +1,4 @@
-import { put, call, takeLatest, select } from 'redux-saga/effects'
+import { put, call, takeLatest, select } from 'redux-saga/effects';
 import {requestDataAction, receiveDataAction} from '../actions/index';
 import * as selectors from '../selectors/selectors';
 import {fetchData} from '../api/api';

@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from './containers/Input';
-import DataTable from './components/DataTable'
+import DataTable from './components/DataTable';
 import { Grid, Navbar, Jumbotron } from 'react-bootstrap';
 
 const App = () =>

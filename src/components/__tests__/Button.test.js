@@ -8,7 +8,7 @@ test('Button component renders a Button', () => {
   const buttonProps = {
     btnName:  'button', 
     btnDisabled:  false
-  }
+  };
 
   const field = shallow( <Button {...buttonProps} />);
   expect(field.find('button').length).toEqual(1);

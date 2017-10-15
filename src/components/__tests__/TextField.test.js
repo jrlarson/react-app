@@ -1,6 +1,6 @@
 import { TextField } from '../TextField';
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { mount } from 'enzyme';
 import { mapStateToProps } from '../TextField';
 import { changeTextAction } from '../TextField';
 
@@ -9,7 +9,7 @@ test('Text Field component renders an input element', () => {
   const textProps = {
     fieldName:  'searchField', 
     searchInputDisabled:  false
-  }
+  };
 
   const field = mount( <TextField {...textProps} />);
   expect(field.find('input').length).toEqual(1);
@@ -33,9 +33,9 @@ test('TestField changeTextAction should respond with an action object', () => {
     type: 'CHANGE_TEXT',
     value: 'search Term',
     fieldName: 'searchInput'
-  }
+  };
 
   const action = changeTextAction('search Term', 'searchInput');
   expect(action).toEqual(expectedResult);
 
-})
+});
