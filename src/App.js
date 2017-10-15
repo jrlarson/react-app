@@ -9,7 +9,7 @@ const App = () =>
       <Grid>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/">React App Sample</a>
+            <a href="/">NM Code Exercise App</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
