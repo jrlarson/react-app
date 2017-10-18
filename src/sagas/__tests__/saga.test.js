@@ -5,7 +5,7 @@ import {fetchData} from '../../api/api';
 
 import {onSearch} from '../Saga';
 
-describe('>>>search ',()=>{
+describe('>>>search ', () => {
   const action = {type: 'TEST_SAGA', output:'TEST_SAGA -Testing'};
   const generator = onSearch(action);
   it('+++ put(requestDataAction())', () => {
