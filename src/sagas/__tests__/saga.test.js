@@ -5,14 +5,14 @@ import {fetchData} from '../../api/api';
 
 import {onSearch} from '../Saga';
 
-describe('>>>search ', () => {
+describe('Saga testing ', () => {
   const action = {type: 'TEST_SAGA', output:'TEST_SAGA -Testing'};
   const generator = onSearch(action);
   it('+++ put(requestDataAction())', () => {
     const testValue = generator.next().value;
     expect(testValue).toEqual(put(requestDataAction()));
   });
-  it('+++ must call select()', () => {
+  it('+++ must call selector', () => {
     const testValue = generator.next().value;
     expect(testValue).toEqual(select(selectors.searchParam));
   });
